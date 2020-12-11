@@ -7,7 +7,7 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
 	if (argc < 2) {
-		cerr << "Error: " << "No input arguments.";
+		cerr << "Error: No input arguments.";
 		exit(1);
 	}
 
@@ -21,9 +21,8 @@ int main(int argc, char *argv[]) {
 	regex regular("(\\/\\*[^\\*\\/]*\\*\\/)|(//.*)");
 
 	if (ifile && ofile) {
-		while (getline(ifile, crline))
+		while (getline(ifile, crline)) 
 			ofile << regex_replace(crline.c_str(), regular, "") << '\n';
-
 	} else {
 		cerr << "Can't open file(s).\n";
 		exit(1);
@@ -35,4 +34,4 @@ int main(int argc, char *argv[]) {
 	return 0;
 }
 
-// B.M Samir
+// Hi!
